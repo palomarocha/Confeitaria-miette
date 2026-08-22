@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Sistema de Cadastro e Codificação</title>    
+    <!-- THIS IS THE START OF A COMMENT BLOCK, BLOCK TO BE DELETED: Google Fonts here, example:
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    THIS IS THE END OF A COMMENT BLOCK, BLOCK TO BE DELETED -->
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function () {
+        // Vite substitutes %VITE_...% placeholders at build time only when the
+        // env var is actually set. If it isn't, the literal placeholder is left
+        // behind — loading that as a URL 404s/502s on every page view. Only
+        // inject the analytics script when both values were really substituted.
+        var endpoint = "%VITE_ANALYTICS_ENDPOINT%";
+        var websiteId = "%VITE_ANALYTICS_WEBSITE_ID%";
+        if (!endpoint || !websiteId || endpoint.indexOf("%") !== -1 || websiteId.indexOf("%") !== -1) return;
+        var script = document.createElement("script");
+        script.defer = true;
+        script.src = endpoint + "/umami";
+        script.setAttribute("data-website-id", websiteId);
+        document.head.appendChild(script);
+      })();
+    </script>
+  </body>
+
+</html>
